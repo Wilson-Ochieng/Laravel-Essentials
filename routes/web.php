@@ -30,4 +30,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/test',function()  {return "Goodbye";} );
 // Route::get('/rooms', 'ShowRoomsController' );
-Route::get('/rooms', '\App\Http\Controllers\ShowRoomsController');
+// Route::get('/rooms', '\App\Http\Controllers\ShowRoomsController');
+Route::get('/rooms',[App\Http\Controllers\ShowRoomsController::class, '__invoke']);
